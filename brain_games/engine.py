@@ -1,6 +1,6 @@
-import random
+#!/usr/bin/env python3
 import prompt
-import operator
+
 
 def game(goal, data):
     print('Welcome to the Brain Games!')
