@@ -4,6 +4,11 @@ version = "0.1.0"
 description = "Package of Brain Games"
 authors = ["webdron <webdron@gmail.com>"]
 readme = "README.md"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python"
+]
+repository = "https://github.com/webdron/python-project-49/"
 packages = [
   { include = "brain_games" },
 ]
