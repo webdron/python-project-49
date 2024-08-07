@@ -3,6 +3,7 @@ import random
 
 from brain_games.engine import game
 
+
 def brain_even():
     goal = 'Answer "yes" if the number is even, otherwise answer "no".'
     check_list = []
@@ -18,4 +19,3 @@ def brain_even():
         i += 1
     data = zip(check_list, questions)
     game(goal, data)
-

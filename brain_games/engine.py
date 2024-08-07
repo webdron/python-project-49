@@ -15,7 +15,8 @@ def game(goal, data):
             i += 1
             print("Correct!")
         else:
-            print(f"'{answer}' is wrong answer ;(. Correct answer was '{check}'. Let's try again, {name}!")
+            print(f"'{answer}' is wrong answer ;(. "
+                  f"Correct answer was '{check}'. Let's try again, {name}!")
             break
     if i == 3:
         print(f'Congratulations, {name}!')
