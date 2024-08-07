@@ -28,7 +28,7 @@ def brain_progression():
         for elem in quest_list:
             string_list.append(str(elem))
         final_list = ' '.join(string_list)
-        questions.append(final_list)
+        questions.append(f'Question: {final_list}')
         i += 1
 
     data = zip(check_list, questions)
