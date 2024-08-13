@@ -1,6 +1,7 @@
 /.venv/
 /.idea/
 /dist/
+**/__pycache__/
 demo.cast
 demo1.cast
 demo2.cast
