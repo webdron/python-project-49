@@ -1,23 +1,22 @@
-#!/usr/bin/env python3
 import random
 
 
-def check_generate():
+def result_generate():
     n = random.randint(1, 100)
     divider = 2
-    result = 1
+    remainder = 1
     if n <= 1:
-        check = 'no'
+        result = 'no'
     else:
-        while result != 0:
-            res = n % divider
+        while remainder != 0:
+            remainder = n % divider
             divider = divider + 1
-        if divider == n + 1 and result == 0:
-            check = 'yes'
+        if divider == n + 1 and remainder == 0:
+            result = 'yes'
         else:
-            check = 'no'
+            result = 'no'
     print(f"Question: {n}")
-    return check
+    return result
 
 
 goal = 'Answer "yes" if given number is prime. Otherwise answer "no".'

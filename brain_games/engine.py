@@ -8,14 +8,14 @@ def engine(mod):
     i = 0
     while i < 3:
         print(mod.goal)
-        check = mod.check_generate()
-        answer = type(check)((prompt.string('Your answer: ')))
-        if check == answer:
+        result = mod.result_generate()
+        answer = type(result)((prompt.string('Your answer: ')))
+        if result == answer:
             i += 1
             print("Correct!")
         else:
             print(f"'{answer}' is wrong answer ;(. "
-                  f"Correct answer was '{check}'. Let's try again, {name}!")
+                  f"Correct answer was '{result}'. Let's try again, {name}!")
             break
         if i == 3:
             print(f'Congratulations, {name}!')

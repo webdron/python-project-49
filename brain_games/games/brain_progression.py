@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
 import random
 
 
-def check_generate():
+def result_generate():
     quest_list = []
     n = random.randint(1, 5)
     n_start = random.randint(1, 10)
@@ -17,13 +16,13 @@ def check_generate():
     index = quest_list.index(rand_elem)
     quest_list.pop(index)
     quest_list.insert(index, "..")
-    check = rand_elem
+    result = rand_elem
     string_list = []
     for elem in quest_list:
         string_list.append(str(elem))
     final_list = ' '.join(string_list)
     print(f'Question: {final_list}')
-    return check
+    return result
 
 
 goal = 'What number is missing in the progression?'
