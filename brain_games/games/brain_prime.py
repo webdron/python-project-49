@@ -8,7 +8,7 @@ def result_generate():
     while remainder != 0:
         remainder = n % divider
         divider = divider + 1
-    if n > 1 or (divider == n + 1 and remainder == 0):
+    if divider == n + 1 and remainder == 0:
         result = 'yes'
     else:
         result = 'no'
