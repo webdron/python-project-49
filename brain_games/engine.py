@@ -19,6 +19,7 @@ def engine(game):
             i += 1
             print("Correct!")
         else:
-            return print(f"'{answer}' is wrong answer ;(. "
-                         f"Correct answer was '{result}'. Let's try again, {name}!")
+            return print(f"'{answer}' is wrong answer ;(."
+                         f"Correct answer was '{result}'."
+                         f"Let's try again, {name}!")
     print(f'Congratulations, {name}!')
