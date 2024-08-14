@@ -1,14 +1,15 @@
 import random
 
+GOAL = 'Answer "yes" if the number is even, otherwise answer "no".'
 
-def result_generate():
+
+def is_even(n):
+    return n % 2 == 0
+
+
+def get_question_and_right_answer():
+    data = []
     n = random.randint(1, 100)
-    if n % 2 == 0:
-        result = 'yes'
-    else:
-        result = 'no'
-    print(f"Question: {n}")
-    return result
-
-
-goal = 'Answer "yes" if the number is even, otherwise answer "no".'
+    data.append('yes' if is_even(n) else 'no')
+    data.append(f"Question: {n}")
+    return data

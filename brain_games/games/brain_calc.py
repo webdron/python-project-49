@@ -1,20 +1,20 @@
 import random
 import operator
 
+GOAL = 'What is the result of the expression?'
 
-def result_generate():
+
+def get_question_and_right_answer():
+    data = []
     ops = {
         '+': operator.add,
         '-': operator.sub,
         '*': operator.mul,
     }
-    oper_list = ['+', '-', '*']
-    rand_oper = random.choice(oper_list)
+    operators_list = ['+', '-', '*']
+    rand_operator = random.choice(operators_list)
     n1 = random.randint(1, 100)
     n2 = random.randint(1, 100)
-    result = (ops[rand_oper](n1, n2))
-    print(f"Question: {n1} {rand_oper} {n2}")
-    return result
-
-
-goal = 'What is the result of the expression?'
+    data.append(ops[rand_operator](n1, n2))
+    data.append(f"Question: {n1} {rand_operator} {n2}")
+    return data

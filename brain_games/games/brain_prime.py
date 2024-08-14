@@ -1,19 +1,20 @@
 import random
 
+GOAL = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
-def result_generate():
-    n = random.randint(1, 100)
+
+def is_prime(n):
     divider = 2
     remainder = 1
     while remainder != 0:
         remainder = n % divider
         divider = divider + 1
-    if divider == n + 1 and remainder == 0:
-        result = 'yes'
-    else:
-        result = 'no'
-    print(f"Question: {n}")
-    return result
+    return divider == n + 1 and remainder == 0
 
 
-goal = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+def get_question_and_right_answer():
+    data = []
+    n = random.randint(1, 100)
+    data.append('yes' if is_prime(n) else 'no')
+    data.append(f"Question: {n}")
+    return data

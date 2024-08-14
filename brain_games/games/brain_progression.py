@@ -1,7 +1,10 @@
 import random
 
+GOAL = 'What number is missing in the progression?'
 
-def result_generate():
+
+def get_question_and_right_answer():
+    data = []
     quest_list = []
     n = random.randint(1, 5)
     n_start = random.randint(1, 10)
@@ -16,13 +19,10 @@ def result_generate():
     index = quest_list.index(rand_elem)
     quest_list.pop(index)
     quest_list.insert(index, "..")
-    result = rand_elem
+    data.append(rand_elem)
     string_list = []
     for elem in quest_list:
         string_list.append(str(elem))
     final_list = ' '.join(string_list)
-    print(f'Question: {final_list}')
-    return result
-
-
-goal = 'What number is missing in the progression?'
+    data.append(f'Question: {final_list}')
+    return data

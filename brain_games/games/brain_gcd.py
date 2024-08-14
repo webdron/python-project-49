@@ -1,23 +1,13 @@
 import random
+import math
+
+GOAL = 'Find the greatest common divisor of given numbers.'
 
 
-def result_generate():
+def get_question_and_right_answer():
+    data = []
     n1 = random.randint(1, 100)
     n2 = random.randint(1, 100)
-    if max(n1, n2) % min(n1, n2) == 0:
-        result = (min(n1, n2))
-        print(f"Question: {n1} {n2}")
-    else:
-        a = max(n1, n2)
-        b = min(n1, n2)
-        m = a % b
-        while m != 0:
-            a = m
-            m = b % m
-            b = a
-        result = a
-    print(f"Question: {n1} {n2}")
-    return result
-
-
-goal = 'Find the greatest common divisor of given numbers.'
+    data.append(math.gcd(n1, n2))
+    data.append(f"Question: {n1} {n2}")
+    return data
