@@ -13,8 +13,7 @@ def is_prime(n):
 
 
 def get_question_and_right_answer():
-    data = []
     n = random.randint(1, 100)
-    data.append('yes' if is_prime(n) else 'no')
-    data.append(f"Question: {n}")
-    return data
+    right_answer = 'yes' if is_prime(n) else 'no'
+    question = f"Question: {n}"
+    return right_answer, question

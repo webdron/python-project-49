@@ -10,16 +10,15 @@ def engine(game):
     i = 0
     while i < NUMBER_OF_ROUNDS:
         print(game.GOAL)
-        data = game.get_question_and_right_answer()
-        result = data[0]
-        question = data[1]
+        right_answer, question = game.get_question_and_right_answer()
         print(question)
-        answer = type(result)((prompt.string('Your answer: ')))
-        if result == answer:
+        answer = prompt.string('Your answer: ')
+        if right_answer == answer:
             i += 1
             print("Correct!")
         else:
-            return print(f"'{answer}' is wrong answer ;(."
-                         f"Correct answer was '{result}'."
-                         f"Let's try again, {name}!")
+            return (
+                print(f"'{answer}' is wrong answer ;(."
+                         f"Correct answer was '{right_answer}'."
+                         f"Let's try again, {name}!"))
     print(f'Congratulations, {name}!')
