@@ -15,7 +15,6 @@ def get_question_and_right_answer():
     final_list = ''
     for elem in quest_list:
         final_list = final_list + f' {str(elem)}'
-        " ".join(final_list)
     right_answer = rand_elem
-    question = f'Question: {final_list}'
+    question = f'Question: {final_list.strip()}'
     return str(right_answer), question
